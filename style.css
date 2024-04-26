@@ -8,7 +8,7 @@
 }
 
 body{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .container{
@@ -18,16 +18,35 @@ body{
 }
 
 #left{
-    background-color: var(--green);
     flex: 1;
+    background-color: var(--green);
+}
+
+.logo{
+    display: flex;
+    flex-direction: row ;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: min-content;
+    background-color: rgba(0, 0, 0, .3);
+    position: relative;
+    top: 16rem;
+}
+
+.logo p{
+    font-size: 4rem;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 #right{
-    background-color: blueviolet;
     flex: 2;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-color:rgb(247, 247, 247);
 }
 
 #right > div{
@@ -37,11 +56,7 @@ body{
     align-items: start;
 }
 
-#right > *{
-    padding: 2rem;
-}
-
-#right > h2{
+#top > h2{
     margin-top: 2rem;
 }
 
@@ -49,6 +64,7 @@ body{
     flex-direction: column;
     justify-content: center;
     flex: 1;
+    padding: 2rem;
 }
 
 #bottom{
@@ -62,29 +78,59 @@ body{
 
 form{
     width: 100%;
+    padding-bottom: 0;
 }
 
-form > div{
-    display: flex;
-    margin-top: 16px;
+section{
+    box-shadow: 1px 2px 5px black;
+    padding: 2rem;
+    background-color: white;
 }
 
-form > div > div{
+/* Each row inside the section */
+section > div{
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* Each item inside the rows */
+section > div > div{
+    display: flex;
+    flex-flow: column wrap;
     margin-right: 2rem;
+    margin-top: 2rem;
 }
 
 input{
     width: 320px;
     height: 2rem;
     border-radius: 0.5rem;
+    border: 1px #E5E7EB solid;
+}
+
+input:focus{
+    border:  1px blue solid;
 }
 
 button{
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
     margin-top: 2rem;
-    padding: 8px 16px;
+    margin-left: 2rem;
+    padding: 1rem 3rem;
     background-color: var(--green);
     border-radius: .5rem;
     border: 0;
+
+}
+
+#bottom > p{
+    padding: 0px 2rem;
+}
+
+a{
+    color: var(--green);
+    font-weight: bold;
+    text-decoration: none;
 }
